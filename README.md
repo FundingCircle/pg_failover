@@ -1,6 +1,7 @@
 # PgFailover
 [![CircleCI](https://circleci.com/gh/FundingCircle/pg_failover/tree/master.svg?style=svg)](https://circleci.com/gh/FundingCircle/pg_failover/tree/master)
 [![Gem Version](https://img.shields.io/gem/v/pg_failover.svg)](https://rubygems.org/gems/pg_failover)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d91a350f5b3e9dd025d3/maintainability)](https://codeclimate.com/github/FundingCircle/pg_failover/maintainability)
 
 Handle potential failover events in PostgreSQL database connections by
 reconnecting if the database is in a recovery mode. This check occurs when a
