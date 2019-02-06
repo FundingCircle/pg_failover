@@ -1,4 +1,5 @@
 # PgFailover
+[![CircleCI](https://circleci.com/gh/FundingCircle/pg_failover/tree/master.svg?style=svg)](https://circleci.com/gh/FundingCircle/pg_failover/tree/master)
 
 Handle potential failover events in PostgreSQL database connections by
 reconnecting if the database is in a recovery mode. This check occurs when a
