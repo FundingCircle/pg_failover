@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'pg_failover'
-  spec.version       = '1.0.0'
+  spec.version       = '1.1.0'
   spec.authors       = ['Aleksandar Ivanov', 'Andy Chambers', 'Sasha Gerrand']
   spec.email         = ['engineering+pg_failover@fundingcircle.com']
   spec.license       = 'BSD-3-Clause'
@@ -29,6 +29,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.required_ruby_version = '~> 2.5'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake', '~> 12.3'
