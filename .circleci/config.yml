@@ -70,24 +70,12 @@ jobs:
       - run:
           name: Publish gem
           command: |
-            package=$(ls -t1 pkg/pg_failover-*.gem | head -1)
+            package="$(ls -t1 pkg/pg_failover-*.gem | head -1)"
             gem push "$package"
 
 workflows:
   test-and-publish:
     jobs:
-      - build:
-          filters:
-            tags:
-              only: /.*/
-          name: "ruby23"
-          tag: "2.3"
-      - build:
-          filters:
-            tags:
-              only: /.*/
-          name: "ruby24"
-          tag: "2.4"
       - build:
           filters:
             tags:
@@ -100,6 +88,12 @@ workflows:
               only: /.*/
           name: "ruby26"
           tag: "2.6"
+      - build:
+          filters:
+            tags:
+              only: /.*/
+          name: "ruby27"
+          tag: "2.7"
       - publish:
           context: org-rubygems
           filters:
@@ -108,7 +102,6 @@ workflows:
             tags:
               only: /^v\d{1,2}\.\d{1,2}\.\d{1,2}.*/
           requires:
-            - ruby23
-            - ruby24
             - ruby25
             - ruby26
+            - ruby27
