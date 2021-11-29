@@ -30,7 +30,7 @@ commands:
 executors:
   ruby:
     docker:
-      - image: circleci/ruby:<< parameters.tag >>
+      - image: cimg/ruby:<< parameters.tag >>
     parameters:
       tag:
         description: "Docker image tag"
@@ -94,6 +94,12 @@ workflows:
               only: /.*/
           name: "ruby27"
           tag: "2.7"
+      - build:
+          filters:
+            tags:
+              only: /.*/
+          name: "ruby30"
+          tag: "3.0"
       - publish:
           context: org-rubygems
           filters:
