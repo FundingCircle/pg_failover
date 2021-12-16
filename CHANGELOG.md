@@ -1,3 +1,5 @@
+v1.1.1 Add ruby 3.x support
+
 v1.1.0 Change supported ruby versions
 
 Supported:
