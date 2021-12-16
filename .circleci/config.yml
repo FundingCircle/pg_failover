@@ -55,6 +55,7 @@ jobs:
   publish:
     executor:
       name: ruby
+      tag: "3.0"
     steps:
       - checkout
       - install-dependencies
@@ -111,3 +112,4 @@ workflows:
             - ruby25
             - ruby26
             - ruby27
+            - ruby30
